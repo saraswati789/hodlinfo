@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HodlInfo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <!-- First part: Logo -->
+      <div class="header-left">
+        <img
+          class="logo-img"
+          src="https://hodlinfo.com/static/media/HODLINFO.8f78fc06.png"
+          alt="logo"
+        />
+      </div>
+
+      <!-- Second part: Dropdowns and Buy Button -->
+      <div class="header-center">
+        <select id="currency-dropdown" class="dropdown">
+          <option value="INR">INR</option>
+          <option value="USD">USD</option>
+        </select>
+
+        <select id="crypto-dropdown" class="dropdown">
+          <option value="BTC">BTC</option>
+          <option value="ETH">ETH</option>
+        </select>
+
+        <button class="btn buy-btn">Buy BTC</button>
+      </div>
+
+      <!-- Third part: Timer, Telegram Button, Theme Toggle -->
+      <div class="header-right">
+        <div id="timer" class="timer">00:00:00</div>
+        <button class="telegram">
+          <i class="fab fa-telegram-plane telegram-icon"></i>
+          Connect Telegram
+        </button>
+        <div class="toggle">
+          <input type="checkbox" id="mode-toggle" class="toggle__input">
+          <label for="mode-toggle" class="toggle__label"></label>
+        </div>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Last</th>
+          <th>Buy</th>
+          <th>Sell</th>
+          <th>Volume</th>
+          <th>Base Unit</th>
+        </tr>
+      </thead>
+      <tbody id="crypto-table-body">
+        <!-- Data will be populated here -->
+      </tbody>
+    </table>
+
+    <script src="app.js"></script>
+  </body>
+</html>
